@@ -1,5 +1,3 @@
-# otp-service
-
 # Project consume message OTP from kafka and send to Email or Phone number
 # Tech: AWS SES, Twilio, Kafka, Spring boot
 # ENV:
