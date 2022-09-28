@@ -1,1 +1,23 @@
+server:
+  port: ${PORT}
 
+amazonSES:
+  accessKey: ${SES_ACCESS_KEY}
+  secretKey: ${SES_SECRET_KEY}
+  region: ${SES_REGION}
+
+email:
+  sender: "leequang198@gmail.com"
+  requestTimeout: ${EMAIL_REQUEST_TIMEOUT}
+
+spring:
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
+    consumer:
+      properties:
+        schema.registry.url: ${SCHEMA_REGISTRY_URL}
+        specific.avro.reader: true
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      group-id: demo
