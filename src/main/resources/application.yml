@@ -7,8 +7,13 @@ amazonSES:
   region: ${SES_REGION}
 
 email:
-  sender: "leequang198@gmail.com"
+  sender: ${EMAIL_SENDER}
   requestTimeout: ${EMAIL_REQUEST_TIMEOUT}
+
+twilio:
+  accountSId: ${TWILIO_ACCOUNT_SID}
+  authToken: ${TWILIO_AUTH_TOKEN}
+  phoneNumber: ${TWILIO_PHONE_NUMBER}
 
 spring:
   kafka:
